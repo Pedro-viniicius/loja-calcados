@@ -60,10 +60,27 @@ export function SiteHeader() {
             <button
               type="button"
               onClick={open}
-              className="flex h-11 items-center gap-2 px-3 text-[0.9375rem] font-medium"
+              className="flex h-11 items-center gap-2 px-3 text-[0.9375rem] font-medium transition-colors hover:text-ink-soft"
               aria-label={`Abrir a sacola${count > 0 ? ` com ${count} ${count === 1 ? "item" : "itens"}` : " (vazia)"}`}
             >
-              Sacola
+              {/* Carrinho: o ícone é o que o olho procura; o texto confirma. */}
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+                className="-ml-0.5"
+              >
+                <path d="M1.5 2.5h3l2.6 12.1h11.2l2.2-8.6H6.2" />
+                <circle cx="9.5" cy="20" r="1.4" />
+                <circle cx="18.5" cy="20" r="1.4" />
+              </svg>
+              <span className="hidden sm:inline">Sacola</span>
               <span
                 aria-hidden="true"
                 className={`flex h-6 min-w-6 items-center justify-center rounded-full px-1.5 text-xs tabular-nums ${
