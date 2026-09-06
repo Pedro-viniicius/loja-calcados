@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Légua — sistema visual
+   Paleta extraída do próprio produto: o preto do cabedal, o café do couro,
+   o camel da palmilha. Ver docs/ESTRATEGIA.md, Etapa 11.
+   A marca é assumidamente clara: papel quente, tinta escura, muito respiro.
+--------------------------------------------------------------------------- */
+
+@theme {
+  --color-paper: #f6f3ee;
+  --color-paper-deep: #ece7df;
+  --color-ink: #17140f;
+  --color-ink-soft: #3b352c;
+  --color-stone: #6e675d;
+  --color-line: #ddd6cc;
+  --color-cafe: #8a5a38;
+  --color-tan: #c89a6b;
+
+  --font-display: var(--font-newsreader), ui-serif, Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Escala tipográfica editorial: salta do corpo direto para o display. */
+  --text-display: clamp(2.5rem, 3.9vw, 3.5rem);
+  --text-title: clamp(1.875rem, 3.1vw, 2.75rem);
+  --text-section: clamp(1.5rem, 2.2vw, 1.875rem);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    /* Corpo de 17px: o público tem 40+. Ver Etapa 11. */
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-tan);
+    color: var(--color-ink);
+  }
+
+  /* Foco visível e consistente — requisito de acessibilidade, não enfeite. */
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Largura de leitura da marca. */
+  .shell {
+    width: 100%;
+    max-width: 78rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .shell {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  /* Rótulo de seção: pequeno, espaçado, sempre acompanhado de um filete. */
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-stone);
+    font-weight: 500;
+  }
+
+  .display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.02;
+  }
+}
