@@ -176,7 +176,7 @@ e atendimento humano por WhatsApp.
 | Elemento | Decisão |
 |---|---|
 | **Catálogo** | 2 SKUs. Turno (preto) e Folga (café). Grade 37–44. |
-| **Preço** | R$ 169 a unidade · R$ 299 os dois ("O Par de Pares", economia de R$ 39) |
+| **Preço** | R$ 89,90 a unidade · R$ 159 os dois ("O Par de Pares", economia de R$ 20,80) |
 | **Praça** | Loja própria (este site). Marketplace fica para depois da validação. |
 | **Frete** | Grátis para todo o Brasil, já embutido no preço. Remove uma objeção inteira. |
 | **Promoção** | Meta Ads (Facebook + Instagram) segmentado por idade/região/interesse ocupacional. Criativo: vídeo de 8s dobrando o solado e calçando sem usar as mãos. |

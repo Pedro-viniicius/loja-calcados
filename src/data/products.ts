@@ -50,7 +50,7 @@ export const products: Product[] = [
     headline: "Ventilação no cabedal inteiro, para o turno que não acaba.",
     description:
       "O preto é o par que cumpre uniforme sem chamar atenção. O cabedal é perfurado de ponta a ponta — não é enfeite, é o ar entrando enquanto você fica em pé. O elástico lateral deixa calçar e tirar sem se abaixar, e o bico largo dá espaço para o pé que incha ao longo do dia.",
-    priceCents: 16900,
+    priceCents: 8990,
     sizes: [37, 38, 39, 40, 41, 42, 43, 44],
     sizesInStock: [37, 38, 39, 40, 41, 42, 43, 44],
     images: [
@@ -82,7 +82,7 @@ export const products: Product[] = [
     headline: "O mesmo conforto, com cara de sábado.",
     description:
       "Mesma forma, mesmo solado, outra intenção. O café tem costura mocassim aparente e um brilho acetinado que o tira do uniforme e leva para o almoço de domingo, para a igreja, para o aniversário. É o par que você calça quando o dia é seu.",
-    priceCents: 16900,
+    priceCents: 8990,
     sizes: [37, 38, 39, 40, 41, 42, 43, 44],
     sizesInStock: [37, 38, 39, 40, 41, 42, 43, 44],
     images: [
@@ -113,7 +113,7 @@ export const bundle = {
   slug: "par-de-pares",
   name: "O Par de Pares",
   headline: "Os dois modelos, um para cada metade da sua semana.",
-  priceCents: 29900,
+  priceCents: 15900,
   get savingsCents() {
     return products.reduce((total, p) => total + p.priceCents, 0) - this.priceCents;
   },

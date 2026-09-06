@@ -6,7 +6,7 @@ export function formatPrice(cents: number): string {
   });
 }
 
-/** "R$ 169,00 ou 3x de R$ 56,33" — parcelamento exibido sem juros no MVP. */
+/** "R$ 89,90 ou 3x de R$ 29,97" — parcelamento exibido sem juros no MVP. */
 export function formatInstallment(cents: number, parts = 3): string {
   return `${parts}x de ${formatPrice(Math.ceil(cents / parts))}`;
 }
